@@ -1,0 +1,37 @@
+# Ignore build artifacts
+/build/
+
+# Ignore CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore compiled object files
+*.o
+*.o.d
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore torrent files
+/torrents/*.torrent
+
+# Ignore environment files
+.env
+
+# Ignore IDE-specific files
+.vscode/
+*.code-workspace
+.idea/

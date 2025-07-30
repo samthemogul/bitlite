@@ -1,0 +1,7 @@
+g++ wifiscan.cpp -o wifiscan -I/usr/include/libnl3 -lnl-3 -lnl-genl-3
+g++ wificonnect.cpp -o wificonnect -I/usr/include/libnl3 -lnl-3 -lnl-genl-3
+sudo apt update
+sudo apt install libssl-dev
+g++ wificonnect.cpp -o wificonnect -I/usr/include/libnl3 -lnl-3 -lnl-genl-3 -lssl -lcrypto
+cmake -S . -B build
+cmake --build build
