@@ -10,9 +10,9 @@
 #include <net/if.h>
 #include <errno.h>
 #include <cstring>
-#include <unistd.h>  // For sleep
-#include <algorithm> // For std::fill
-#include <utility> // For std::pair
+#include <unistd.h>
+#include <algorithm>
+#include <utility> 
 
 struct WifiNetwork
 {

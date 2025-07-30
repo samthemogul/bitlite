@@ -13,8 +13,8 @@
 namespace bencode
 {
 
-    // Define Bencode Value Variant
-    struct Bencode; // Forward declaration
+    
+    struct Bencode; 
 
     using BencodeValue = std::variant<
         int64_t,
@@ -27,7 +27,7 @@ namespace bencode
         BencodeValue value;
     };
 
-    // --- Decode Functions ---
+    
 
     // Decode bencoded string into the appropraite value
     BencodeValue decode(const std::string &input);
@@ -38,7 +38,7 @@ namespace bencode
     // Encode BencodeValue into a bencoded string
     std::string encode(const BencodeValue &value);
 
-    // --- Utility Functions ---
+    
 
     // Pretty-print the value (for debugging)
     void print(const BencodeValue &value, int indent = 0);

@@ -5,9 +5,14 @@ Bitlite is a free chat application that leverages Wi-Fi technology and the BitTo
 ## Features
 
 - **Wi-Fi Scanning and Connection**: Automatically scans for available Wi-Fi networks and allows users to connect to a selected network.
-- **Decentralized Messaging**: Uses the BitTorrent protocol to send messages directly between devices without a central server.
+- **Decentralized Messaging**: Uses a BitTorrent-like protocol to send messages directly between devices without a central server.
 - **WebSocket Communication**: Enables real-time message exchange between devices using WebSocket technology.
-- **Cross-Platform Support**: Built with C++ and Node.js for compatibility across multiple platforms.
+
+## Upcoming Integration
+
+1. Expand support to include Windows, Debian, Fedora, Android, and iOS devices.
+2. Implement Wi-Fi Direct with a multi-hop mechanism to enable devices to chat over longer distances without requiring a traditional Access Point or hotspot.
+3. Extend the BitTorrent-like protocol to support file sharing between devices.
 
 ## Project Structure
 
@@ -62,12 +67,12 @@ Bitlite/
 
 ### Starting the System
 
-1. Start the Python WebSocket server on your phone:
+1. Start the Python WebSocket server on your phone(Using Termux or an equivalent):
    ```bash
    python3 server.py
    ```
 
-2. Run the Node.js WebSocket client on your laptop:
+2. Run the Node.js WebSocket client on your laptop(Linux-Debian OS for now):
    ```bash
    node server.js
    ```
@@ -84,7 +89,7 @@ Bitlite/
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+This project would be open-sourced soon, watch out.
 
 ## License
 
@@ -92,7 +97,8 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Acknowledgments
 
-- [Boost](https://www.boost.org/) for C++ libraries
+
 - [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) for real-time communication
 - [Node.js](https://nodejs.org/) for process management and WebSocket client
 - [Python](https://www.python.org/) for the WebSocket server
+- [Netlink](https://wireless.docs.kernel.org/en/latest/en/developers/documentation/nl80211.html) for Wi-Fi network communication in Linux

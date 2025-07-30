@@ -1,6 +1,5 @@
 #include "torrent_creator.hpp"
 #include "bencode.hpp"
-
 #include <fstream>
 #include <iostream>
 #include <iterator>
@@ -114,4 +113,4 @@ namespace torrent
         write_to_file(output_path, encoded);
     }
 
-} // namespace torrent
+}

@@ -127,9 +127,9 @@ static int dummy_callback(struct nl_msg *msg, void *arg)
 // Function to perform a Wi-Fi scan and return results
 int perform_scan(struct nl_sock *sk_cmd, struct nl_sock *sk_evt, int nl80211_id, int if_index, struct nl_cb *cb, struct nl_cb *cb_evt, std::vector<WifiNetwork> &networks)
 {
-    networks.clear(); // Clear previous scan results
+    networks.clear();
 
-    struct nl_msg *msg_scan = nullptr; // Initialize to nullptr
+    struct nl_msg *msg_scan = nullptr; 
     msg_scan = nlmsg_alloc();
     if (!msg_scan)
     {
@@ -160,7 +160,7 @@ int perform_scan(struct nl_sock *sk_cmd, struct nl_sock *sk_evt, int nl80211_id,
     sleep(5); // Give the scan time to complete
 
     // Get Scan Results (dump existing BSS entries)
-    struct nl_msg *msg_get_scan = nullptr; // Initialize to nullptr
+    struct nl_msg *msg_get_scan = nullptr;
     msg_get_scan = nlmsg_alloc();
     if (!msg_get_scan)
     {
@@ -309,11 +309,6 @@ void connect_to_wifi(const WifiNetwork &network, const std::string &passphrase, 
                &bssid_bytes[3], &bssid_bytes[4], &bssid_bytes[5]) == 6)
     {
         nla_put(msg_connect, NL80211_ATTR_BSSID, 6, bssid_bytes);
-    }
-
-    if (!passphrase.empty())
-    {
-        // Add passphrase handling here if needed
     }
 
     int ret_connect = nl_send_auto_complete(sk_cmd, msg_connect);

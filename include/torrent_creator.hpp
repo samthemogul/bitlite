@@ -10,10 +10,10 @@
 namespace torrent {
 
     struct TorrentFile {
-        std::string announce;  // tracker URL (optional in offline)
+        std::string announce;  // Not required for offline mode
         std::string file_name;
         int64_t file_length;
-        std::string piece_hashes; // concatenated SHA1 hashes of pieces
+        std::string piece_hashes;
         int64_t piece_length;
     };
 

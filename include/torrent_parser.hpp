@@ -12,9 +12,8 @@ public:
     std::string announce;
     std::string name;
     int64_t pieceLength;
-    std::string pieces; // raw SHA1 concatenation
-    int64_t length = 0; // single file size
-    // Add multi-file support here
+    std::string pieces;
+    int64_t length = 0;
 
     void print() const;
 };

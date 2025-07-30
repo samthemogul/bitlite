@@ -212,4 +212,4 @@ namespace bencode
         }
     }
 
-} // namespace bencode
+}
