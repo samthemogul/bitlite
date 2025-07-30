@@ -32,7 +32,6 @@ bitliteProcess.stdout.on('data', (data) => {
         ws.on('open', () => {
             console.log(`Connected to WebSocket server at ws://${phoneIp}:${phonePort}`);
 
-            // Send a test message
             ws.send('Hello from the laptop!');
 
             // Allow user to send custom messages
